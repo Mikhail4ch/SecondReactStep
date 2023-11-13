@@ -1,4 +1,4 @@
-.container {
+.App {
     padding: 20px;
     background: whitesmoke;
     width: 95%;
@@ -18,6 +18,15 @@
   
   .genre p {
     margin-bottom: 20px;
+  }
+  button {
+    font-size: 2rem;
+    width: 4rem;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+  span {
+    font-size: 1.5rem;
   }
   
   
