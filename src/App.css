@@ -2,7 +2,7 @@
     padding: 20px;
     background: whitesmoke;
     width: 95%;
-    height: 100vh;
+    height: 120vh;
   }
   
   .container h1 {
@@ -22,11 +22,19 @@
   button {
     font-size: 2rem;
     width: 4rem;
-    margin: 1rem;
+    margin: 0.75rem;
     padding: 0.5rem;
   }
+  .button:hover {
+    background-color: white;
+    color: black;
+    border-width: 2px
+}
   span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  input {
+    margin: 5px;
   }
   
   

@@ -20,8 +20,8 @@ const Counter = () => {
       <div>
         <span> <h2>Counter: {count}</h2> </span>
         <button onClick={Increment}>+</button>
-        <button onClick={Decrement}>-</button>
         <button onClick={Reset}>0</button>
+        <button onClick={Decrement}>-</button>
       </div>
     );
   };
