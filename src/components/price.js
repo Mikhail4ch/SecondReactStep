@@ -7,7 +7,7 @@ function PriceCounter() {
         setPrice(value); } };
         return (  
             <>
-                <h2>Price is: {price}</h2>
+                <h2>Price is: {`$ ${price}`} </h2>
                 <p><Input type="text" value={price} onChange={handlePriceChange} label="Price"/></p>
             </>
         )

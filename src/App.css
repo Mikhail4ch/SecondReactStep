@@ -2,7 +2,7 @@
     padding: 20px;
     background: whitesmoke;
     width: 95%;
-    height: 120vh;
+    height: max-content;
   }
   
   .container h1 {
@@ -21,7 +21,6 @@
   }
   button {
     font-size: 2rem;
-    width: 4rem;
     margin: 0.75rem;
     padding: 0.5rem;
   }

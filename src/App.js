@@ -3,6 +3,7 @@ import Container from './components/Container';
 import Counter from './components/Count';
 import ProductCounter from './components/product';
 import PriceCounter from './components/price';
+import Product from './components/Product2';
 function App() {
   return (
     <>
@@ -13,6 +14,8 @@ function App() {
      <hr/>
      <ProductCounter/>
      <p> <PriceCounter/> </p>
+     <hr/>
+     <Product/> 
     </div>
     </>
   );
