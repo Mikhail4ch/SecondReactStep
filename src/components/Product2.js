@@ -1,52 +1,20 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import NewCard from "./NewCard"
 import ProductTable from "./ProductTable"
 import Total from "./Total"
+import ProductContext from "../context/ProductContext"
 
 function Product() {
-
-    const [count, setCount] = useState(0)
-    const [discount, setDiscount] = useState(0)
-    const [name, setName] = useState('Banana')
-    const [price, setPrice] = useState(2);
-
+    const context = useContext (ProductContext)
     const [list, setList] = useState([])
-
-    const handleMinus = () => {
-        setCount((prevCount) => {
-            let count = prevCount -1
-            if (count < 5) {
-                setDiscount(0)
-            }
-            return count;
-        });
-    }
-
-    const handlePlus = () => {
-        setCount((prevCount) => {
-            let count = prevCount + 1
-            if (count >= 5) {
-                setDiscount(20)
-            }
-            return count;
-        })
-    }
-
-    const handleNameChange = (value) => {
-        setName(value)
-    }
-
-    const handlePriceChange = (value) => {
-        setPrice(value)
-    }
 
     const handleAddProduct = () => {
         const newItem = {
-            name: name,
-            price: price, 
-            count: count,
-            discount: discount,
-            total: (count * price) - (discount/100*count*price )
+            name: context.name,
+            price: context.price, 
+            count: context.count,
+            discount: context.discount,
+            total: (context.count * context.price) - (context.discount/100*context.count*context.price )
         }
         const newList = [...list, newItem]
         setList(newList)
@@ -55,20 +23,9 @@ function Product() {
 
     return (
         <>
-            <NewCard 
-                count={count}
-                name={name}
-                price={price}
-                discount={discount}
-                handleAddProduct={handleAddProduct}
-                handleMinus={handleMinus}
-                handlePlus={handlePlus}
-                handleNameChange={handleNameChange}
-                handlePriceChange={handlePriceChange}
-            />
+            <NewCard handleAddProduct={handleAddProduct} />
             <ProductTable list={list}/>
             <Total viewList={list}/>
-        
         </>
     )
 }
