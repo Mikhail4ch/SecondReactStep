@@ -11,7 +11,7 @@ export function productReducer(state, action) {
     case "COUNT_MINUS" : {
        let newState = {...state}
        newState.count = state.count - 1 
-       if (newState < 5) {
+       if (newState.count < 5) {
         newState.discount = 0
        }
        return newState
@@ -19,7 +19,7 @@ export function productReducer(state, action) {
     case "COUNT_PLUS" : {
         let newState = {...state}
        newState.count = state.count + 1 
-       if (newState >= 5) {
+       if (newState.count >= 5) {
         newState.discount = 20
        }
        return newState

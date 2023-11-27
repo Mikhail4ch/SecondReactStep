@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .counter {
+    display: flex;
+    align-items: center;
+  }
+  .name {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .price {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .discount {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0 0 1rem 0;
+  }
+  .count {
+    font-size: 2rem;
+  }
+  .dark {
+    background-color: #333;
+    color: white;
+  }
+  .form {
+    width: 500px;
+    margin: 25px, 0;
+    text-align: center;
+  }
+  .table {
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 0.9em;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  .table thead tr {
+    background-color: #5287e3;
+    color: #ffffff;
+    text-align: right;
+  }
+  .table th {
+    padding: 12px 6px;
+    text-align: center;
+  }
+  .table td {
+    padding: 6px 3px;
+    text-align: center;
+  }
+  .table th:nth-child(1) {
+    width: 50%;
+  }
+  .table th:nth-child(2), 
+  .table th:nth-child(4) {
+    width: 12%;
+  }
+  .table th:nth-child(3) {
+    width: 15%;
+  }
+  .table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  input[type=submit] {
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: #abfba8;
+    border-radius: 10px;
+    border: 2px solid #5287e3;
+    color: black;
+    transition-duration: 0.3s;
+  }
+  input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    border-width: 2px;
+  }
+  input[type=text], input[type=number] {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1rem;
+    padding: 9px 6px;
+    border: 1px solid #a3a3a3;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }

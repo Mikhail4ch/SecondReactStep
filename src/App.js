@@ -4,6 +4,7 @@ import Counter from './components/Count';
 import ProductCounter from './components/product';
 import PriceCounter from './components/price';
 import Product from './components/Product2';
+import { ProductProvider } from './context/ProductContext';
 function App() {
   return (
     <>
@@ -15,7 +16,9 @@ function App() {
      <ProductCounter/>
      <p> <PriceCounter/> </p>
      <hr/>
+     <ProductProvider>
      <Product/> 
+     </ProductProvider>
     </div>
     </>
   );

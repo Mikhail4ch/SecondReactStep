@@ -18,7 +18,7 @@ export function ProductProvider ({children}) {
     }
 
     const handlePriceChange = (value) => {
-        dispatch ({type: "SET_PRICE", name: value})
+        dispatch ({type: "SET_PRICE", price: value})
     }
 
     const context = {

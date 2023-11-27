@@ -1,31 +1,24 @@
 import styles from "./NewCard.module.css"
 import Button from "./Button"
 import Input from "./input"
+import { useContext } from "react"
+import ProductContext from "../context/ProductContext"
 
-function NewCard({
-    name,
-    count,
-    price,
-    discount,
-    handleMinus,
-    handlePlus,
-    handleNameChange,
-    handlePriceChange,
-    handleAddProduct
-}) {
+function NewCard({handleAddProduct}) {
+    const context = useContext (ProductContext)
     return (
         <div className={styles.newCard}>
-            <div className={styles.name}>{name}</div>
+            <div className={styles.name}>{context.name}</div>
             <div className={styles.counter}>
-                <Button label="+" onClick={handlePlus} />
-                <span className={styles.count}>{count}</span>
-                <Button label="-" onClick={handleMinus} />
+                <Button label="+" onClick={context.handlePlus} />
+                <span className={styles.count}>{context.count}</span>
+                <Button label="-" onClick={context.handleMinus} />
             </div>
-            <div className={styles.price}>{`$ ${price}`} each</div>
-            <div className={styles.discount}>{`Discount: ${discount}%`}</div>
+            <div className={styles.price}>{`$ ${context.price}`} each</div>
+            <div className={styles.discount}>{`Discount: ${context.discount}%`}</div>
             <div className={styles.form}>
-                <Input value={name} label="Product Name" onChange={handleNameChange}/>
-                <Input value={price} label="Product Price" onChange={handlePriceChange}/>
+                <Input value={context.name} label="Product Name" onChange={context.handleNameChange}/>
+                <Input value={context.price} label="Product Price" onChange={context.handlePriceChange}/>
             </div>
             <Button label="Add Product" onClick={handleAddProduct} />
         </div>
